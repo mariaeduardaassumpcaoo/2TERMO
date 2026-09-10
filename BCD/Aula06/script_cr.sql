@@ -43,15 +43,6 @@ vinculada a uma mesa. (0,N) A (1,1)
 
 5. Um pedido possui vários itens. Um item de pedido pertence a um único pedido. (1,N) A (1,1)
 
-
-
-
-
-
-
-
-
-
 -- CONSULTA DE TABELAS
 SELECT * FROM CLIENTE;
 SELECT * FROM PEDIDO;
