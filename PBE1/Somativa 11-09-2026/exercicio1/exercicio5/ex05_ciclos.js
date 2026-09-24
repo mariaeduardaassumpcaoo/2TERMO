@@ -1,1 +1,0 @@
-// Pulei porque tenho difilcudades com o for.
