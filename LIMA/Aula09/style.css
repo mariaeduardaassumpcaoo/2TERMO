@@ -28,7 +28,7 @@ main {
 }
 
 section {
-    border: 5px solid #ff2424;
+    border: 5px solid hsl(0, 100%, 18%);
     padding: 20px;
     margin: 0;
 }
