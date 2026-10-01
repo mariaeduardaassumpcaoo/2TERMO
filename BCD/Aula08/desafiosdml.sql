@@ -128,3 +128,20 @@ INSERT INTO CATEGORIA (NOME) VALUES
 ('EXCLUIR DEPOIS');
 DELETE FROM CATEGORIA 
 WHERE NOME = 'EXCLUIR DEPOIS';
+
+-- PARTE D
+
+--17.
+INSERT INTO produto (nome, preco, id_categoria)
+VALUES ('fondue', 35.00, 80);
+-- Categoria está inexistente(fk)
+
+--18.
+INSERT INTO cliente (nome, email, telefone)
+VALUES ('Maria', 'teste@email.com', '11988887777');
+-- O email já existe(unique)
+
+--19.
+INSERT INTO pedido (id_cliente, data, valor_total)
+VALUES (999, '2025-09-25', 150.00);
+-- Cliente inexistente
