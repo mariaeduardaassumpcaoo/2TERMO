@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background-color: #f8eee7;
+    color: #3b2118;
+}
+
+header {
+    background-color: #4b1f1f;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 45px 60px;
+    background-color: #f8eee7;
+}
+
+.banner-conteudo {
+    background-color: transparent;
+    padding: 0;
+    display: block;
+    width: 40%;
+}
+
+.banner-conteudo p:first-child {
+    color: #8a4a3c;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.banner-conteudo h1 {
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.banner-conteudo p {
+    margin-bottom: 20px;
+}
+
+.banner-conteudo a,
+.sobre > a,
+.ambiente-conteudo a {
+    background-color: #a85d2a;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.banner-imagem {
+    width: 40%;
+}
+
+.banner-imagem img {
+    width: 100%;
+}
+
+.sobre {
+    background-color: white;
+    padding: 45px 60px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.sobre-imagem {
+    width: 45%;
+}
+
+.sobre-imagem img {
+    width: 100%;
+}
+
+.sobre-cabecalho {
+    background-color: transparent;
+    padding: 0;
+    display: block;
+}
+
+.sobre-cabecalho p {
+    color: #8a4a3c;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sobre-cabecalho h2 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.sobre > p {
+    width: 30%;
+    line-height: 1.5;
+}
+
+.sobre > a {
+    background-color: white;
+    color: #8a4a3c;
+    border: 1px solid #8a4a3c;
+}
+
+.cafes {
+    background-color: #f0dfd0;
+    padding: 45px 60px;
+    text-align: center;
+}
+
+.secao-cabecalho {
+    background-color: transparent;
+    padding: 0;
+    display: block;
+}
+
+.secao-cabecalho p {
+    color: #8a4a3c;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.secao-cabecalho h2 {
+    margin: 10px 0 25px;
+}
+
+.lista-cafes {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-cafe {
+    background-color: white;
+    width: 220px;
+    text-align: left;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-cafe img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.card-cafe h3,
+.card-cafe p,
+.card-cafe strong {
+    margin-left: 15px;
+}
+
+.card-cafe h3 {
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+.card-cafe p {
+    font-size: 12px;
+    margin-top: 7px;
+    margin-bottom: 8px;
+}
+
+.card-cafe strong {
+    color: #8a4a3c;
+    font-size: 13px;
+}
+
+.ambiente {
+    background-color: #4b1f1f;
+    color: white;
+    padding: 45px 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ambiente-conteudo {
+    background-color: transparent;
+    padding: 0;
+    display: block;
+    width: 40%;
+}
+
+.ambiente-conteudo p:first-child {
+    color: #d59a6a;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ambiente-conteudo h2 {
+    margin: 15px 0;
+}
+
+.ambiente-conteudo p {
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.ambiente-imagem {
+    width: 40%;
+}
+
+.ambiente-imagem img {
+    width: 100%;
+}
+
+.contato {
+    background-color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.contato-cabecalho {
+    background-color: transparent;
+    padding: 0;
+    display: block;
+    width: 40%;
+}
+
+.contato-cabecalho h2 {
+    margin-bottom: 10px;
+}
+
+.contato-cabecalho p {
+    font-size: 13px;
+}
+
+form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+input,
+textarea {
+    padding: 8px;
+    border: 1px solid #b99a8b;
+    margin-top: 5px;
+}
+
+textarea {
+    height: 70px;
+}
+
+button {
+    background-color: #a85d2a;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #321514;
+    color: white;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+footer nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+footer nav a {
+    font-size: 11px;
+}
