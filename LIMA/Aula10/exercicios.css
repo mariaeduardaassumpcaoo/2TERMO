@@ -14,11 +14,35 @@
 
 /* DISTRIBUA */
 
-.equipe {
+/* .equipe {
      justify-content: flex-start;
      align-items: center;
      justify-content: space-between;
      justify-content: space-evenly;
      align-items: flex-end;
+}  */
+
+/* EXERCICIO 4 */
+
+/* .lorem1 {
+    display: flex;
+    justify-content: flex-start;
 }
+
+.lorem2 {
+    display: flex;
+    justify-content: center;
+}
+
+.lorem3 {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+/* EXERCICIO 5 */
+
+/* .cards {
+    display: flex;
+    gap: 20px;
+} */
 
