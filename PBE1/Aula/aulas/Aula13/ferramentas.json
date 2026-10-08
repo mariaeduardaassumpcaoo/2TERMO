@@ -1,0 +1,12 @@
+[
+  {
+    "nome": "martelo",
+    "quantidade": 30,
+    "custoUnitario": 80
+  },
+  {
+    "nome": "chave",
+    "quantidade": 2,
+    "custoUnitario": 20
+  }
+]
