@@ -1,7 +1,7 @@
 -- ============================================================
 -- AULA 09 - ATIVIDADE PRÁTICA DE DQL
--- Nome: _______________________________________________
--- Turma: ______________________ Data: _________________
+-- Nome: MARIA EDUARDA SAMPAIO ASSMPÇÃO.
+-- Turma: 2DEVIS Data: 08-10-2026
 -- Base: smartcoffee_dql
 -- ============================================================
 USE smartcoffee_dml_duda;
