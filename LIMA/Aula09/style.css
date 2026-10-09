@@ -1,41 +1,55 @@
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: white;
-    color: #000000;
+    background-color: #f8efe2;
+    color: #4b2e20;
 }
 
 header {
-    background-color: #800000;
-    color: white;
+    background-color: #563321;
+    color: #fff1dc;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
 }
 
 nav {
     margin-top: 20px;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 5px;
+}
+
 nav a {
-    color: white;
+    color: #fff1dc;
     text-decoration: none;
     margin: 10px;
 }
 
 main {
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
 section {
-    border: 5px solid hsl(0, 100%, 18%);
+    border: 2px solid #e5d0b5;
     padding: 20px;
-    margin: 0;
+    margin: 20px 0;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    color: #000000;
 }
 
 h2 {
     text-align: center;
-    color: #000000;
 }
 
 img {
@@ -44,33 +58,62 @@ img {
     margin: 10px auto;
 }
 
+.lista-cafes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.lista-cafes li {
+    width: 250px;
+}
+
 article {
-    background-color: #f3e4d5;
+    background-color: #f3e5d2;
     padding: 15px;
-    margin: 10px;
-    display: inline-block;
-    width: 200px;
-    vertical-align: top;
+    margin: 0;
+    border: 1px solid #e1c7a8;
     text-align: center;
 }
 
 article img {
     width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
-ul {
-    text-align: center;
-    padding: 0;
+button {
+    background-color: #75452f;
+    color: #fff1dc;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border: 1px solid #d8c2a8;
+    box-sizing: border-box;
+    background-color: #fffaf2;
 }
 
 footer {
-    background-color: #800000;
-    color: white;
+    background-color: #563321;
+    color: #fff1dc;
     text-align: center;
     padding: 20px;
 }
 
-button {
-    background-color: #b98f8f;
-    color: white;
+footer a {
+    color: #fff1dc;
+}
+
+.banner a {
+    color: #000000;
 }
