@@ -1,0 +1,135 @@
+/* Exercicio 1
+
+.itens {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.itens li {
+    padding: 20px;
+} */
+
+
+/* Exercicio 2 */
+
+/* .itens {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.itens li {
+    padding: 20px;
+} */
+
+/* Exercicio 3 */
+
+/* .itens {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:10px;
+}
+
+.itens li {
+    padding: 20px;
+}
+
+-- O 2fr faz a primeira coluna ocupar o maior espaço da segunda que usa o 1fr. */
+
+
+/* Exercicio 4 */
+
+
+/* .itens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.itens li {
+    padding: 20px;
+}  */
+
+/* 
+Exercicio 5 */
+
+
+
+/* .itens {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.itens li {
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+    .itens {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .itens {
+        grid-template-columns: 1fr;
+    }
+} */
+
+
+/* Exercicio 6 */
+
+/* .itens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+.itens li {
+    padding: 20px;
+}
+
+-- O auto-fit ajusta a quantidade de colunas ao espaço disponível. E o minmax faz cada coluna ter pelo menos 220px e faz ela aumentar. */
+
+/* Desafio Senai  */
+
+/* .soluções {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.soluções li {
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+    .soluções {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .soluções {
+        grid-template-columns: 1fr;
+    }
+} */
+
+/* Utilizando auto-fit e minmx() */
+
+
+/* .soluções {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.soluções li {
+    background-color: rgb(29, 0, 215);
+    padding: 20px;
+} */
+
+/* -- A que possui menos regras é a solução auto-fit e minmax()
+-- Eu escolheria a segunda porque ajusta tudo automaticamente e deixa o código mais simples. */
