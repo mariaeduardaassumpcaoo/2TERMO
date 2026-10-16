@@ -59,12 +59,12 @@ header p {
     background-color: var(--branco);
     border: 2px solid var(--caramelo);
     padding: var(--espaco);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: 1s;
 }
 
 .card:hover {
     transform: translate(-2x);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: var(--caramelo);
 }
 
