@@ -1,0 +1,73 @@
+:root {
+    --caramelo: #C68E53;
+    --cafe: #4B2E1E;
+    --bege: #F5E6D3;
+    --branco: #FFFFFF;
+    --espaco: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bege);
+    color: var(--cafe);
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--branco);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--cafe);
+}
+
+h3 {
+    font-size: 1rem;
+    color: var(--cafe);
+}
+
+header {
+    background-color: var(--cafe);
+    text-align: center;
+    padding: var(--espaco);
+}
+
+header p {
+    color: var(--branco);
+}
+
+.botao {
+    background-color: var(--caramelo);
+    color: var(--branco);
+    padding: 12px 24px;
+    border: none;
+    border-radius:10px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--cafe);
+}
+
+.card {
+    background-color: var(--branco);
+    border: 2px solid var(--caramelo);
+    padding: var(--espaco);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 1s;
+}
+
+.card:hover {
+    transform: translate(-2x);
+    background-color: var(--caramelo);
+}
+
+p {
+    margin-bottom: var(--espaco);
+}
