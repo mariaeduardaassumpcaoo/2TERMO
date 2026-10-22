@@ -155,6 +155,7 @@ WHERE E.STATUS_EMPRESTIMO = 'ABERTO';
 
 
 
-
-
 -- LEFT JOIN
+
+
+
