@@ -180,3 +180,16 @@ h1, h2, h3, p {
     box-shadow: 0 12px 35px rgba(255, 61, 129, 0.22);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.botao:hover, .botao:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 46px rgba(255,61,129, 0.32);
+}
+
+.hero-arte {
+    position: relative;
+    min-height: 540px;
+    border: 1px solid var(--borda);
+    border-radius: 36px;
+    background: linear-gradient(145deg, rgba(24,217,255,0.08), rgba(255,61,129,0.08));
+}
