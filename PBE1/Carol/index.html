@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Serra Azul IA | Consulta de Estoque</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">SA</div>
+
+                <div>
+                    <strong>Serra Azul IA</strong>
+                    <span>Assistente de estoque</span>
+                </div>
+            </div>
+
+            <div class="side-label">MENU PRINCIPAL</div>
+
+            <button class="nav-item active" data-view="chat">
+                <span>◉</span>
+                Chat de consultas
+            </button>
+
+            <button class="nav-item" data-view="estoque">
+                <span>▦</span>
+                Estoque de produtos
+            </button>
+
+            <button class="nav-item" data-view="lotes">
+                <span>◷</span>
+                Lotes e validades
+            </button>
+
+            <div class="sidebar-bottom">
+                <div class="status-dot"></div>
+
+                <div>
+                    <b>Sistema demonstrativo</b>
+                    <small>Base fictícia do projeto</small>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+                    <div class="eyebrow">
+                        LÁCTEOS SERRA AZUL LTDA.
+                    </div>
+
+                    <h1 id="page-title">Chat de consultas</h1>
+                </div>
+
+                <div class="user-chip">
+                    <div class="user-avatar">OP</div>
+
+                    <div>
+                        <b>Operações</b>
+                        <small>Logística e estoque</small>
+                    </div>
+                </div>
+
+            </header>
+
+            <!-- PÁGINA DO CHATBOT -->
+            <section class="view active" id="view-chat">
+
+                <div class="welcome">
+
+                    <div class="welcome-copy">
+
+                        <span class="tag">ASSISTENTE INTERNO</span>
+
+                        <h2>
+                            Olá! Como posso ajudar<br>
+                            com o estoque hoje?
+                        </h2>
+
+                        <p>
+                            Consulte quantidades, endereços, ocupação do
+                            armazém e validades usando perguntas simples.
+                        </p>
+
+                    </div>
+
+                    <div class="welcome-art">
+                        <div class="art-circle">✦</div>
+
+                        <div class="milk-carton">
+                            <span>SA</span>
+                            <i>🥛</i>
+                        </div>
+
+                        <div class="art-leaf">✦</div>
+                    </div>
+
+                </div>
+
+                <!-- INDICADORES -->
+                <div class="metrics">
+
+                    <article class="metric-card">
+
+                        <div class="metric-icon blue">▦</div>
+
+                        <div>
+                            <span>Tipos de produtos</span>
+                            <strong>11</strong>
+                            <small>cadastrados na base</small>
+                        </div>
+
+                    </article>
+
+                    <article class="metric-card">
+
+                        <div class="metric-icon green">▤</div>
+
+                        <div>
+                            <span>Pallets ocupados</span>
+
+                            <strong>
+                                1.128 <em>/ 1.200</em>
+                            </strong>
+
+                            <small>Capacidade livre: 72 pallets</small>
+                        </div>
+
+                    </article>
+
+                    <article class="metric-card">
+
+                        <div class="metric-icon orange">◷</div>
+
+                        <div>
+                            <span>Ocupação do armazém</span>
+                            <strong>94%</strong>
+
+                            <div class="progress">
+                                <i></i>
+                            </div>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- ÁREA DE CONVERSA -->
+                <div class="chat-layout">
+
+                    <div class="chat-panel">
+
+                        <div class="panel-heading">
+
+                            <div class="bot-avatar">✦</div>
+
+                            <div>
+                                <b>Serra Azul IA</b>
+
+                                <small>
+                                    <span class="online-dot"></span>
+                                    Pronto para consultar a base
+                                </small>
+                            </div>
+
+                            <span class="demo-badge">DEMO</span>
+
+                        </div>
+
+                        <div
+                            class="chat-messages"
+                            id="chat-messages"
+                            aria-live="polite"
+                        >
+
+                            <div class="message bot">
+
+                                <div class="message-avatar">✦</div>
+
+                                <div class="bubble">
+
+                                    <b>Serra Azul IA</b>
+
+                                    <p>
+                                        Olá! Sou o assistente de consultas
+                                        da Lácteos Serra Azul.
+
+                                        Posso ajudar a localizar produtos,
+                                        conferir quantidades e consultar
+                                        lotes e validades.
+                                    </p>
+
+                                    <span class="time">Agora</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="suggestions-label">
+                            EXPERIMENTE PERGUNTAR
+                        </div>
+
+                        <div class="suggestions">
+
+                            <button data-prompt="Quantas unidades de leite UHT integral temos no estoque?">
+                                Quantidade de leite UHT integral
+                            </button>
+
+                            <button data-prompt="Onde está armazenado o iogurte de morango?">
+                                Local do iogurte de morango
+                            </button>
+
+                            <button data-prompt="Qual lote vence primeiro?">
+                                Lote com vencimento mais próximo
+                            </button>
+
+                            <button data-prompt="Qual é a ocupação média do armazém?">
+                                Ocupação do armazém
+                            </button>
+
+                        </div>
+
+                        <form class="chat-input" id="chat-form">
+
+                            <input
+                                id="user-input"
+                                type="text"
+                                placeholder="Digite sua pergunta sobre o estoque..."
+                                autocomplete="off"
+                                aria-label="Digite sua pergunta"
+                            >
+
+                            <button type="submit" aria-label="Enviar mensagem">
+                                ➤
+                            </button>
+
+                        </form>
+
+                        <div class="disclaimer">
+                            As informações são baseadas no cadastro fictício
+                            do projeto. Nenhuma movimentação de estoque é realizada.
+                        </div>
+
+                    </div>
+
+                    <!-- PAINEL DE AJUDA -->
+                    <aside class="help-panel">
+
+                        <div class="help-icon">✧</div>
+
+                        <h3>O que posso consultar?</h3>
+
+                        <p>
+                            Faça uma pergunta do seu jeito.
+                            Use os exemplos abaixo para começar.
+                        </p>
+
+                        <div class="help-item">
+                            <span>⌕</span>
+
+                            <div>
+                                <b>Produtos e quantidades</b>
+                                <small>Estoque, código e pallets</small>
+                            </div>
+                        </div>
+
+                        <div class="help-item">
+                            <span>⌖</span>
+
+                            <div>
+                                <b>Endereços</b>
+                                <small>Localização no armazém</small>
+                            </div>
+                        </div>
+
+                        <div class="help-item">
+                            <span>◷</span>
+
+                            <div>
+                                <b>Lotes e validades</b>
+                                <small>Apoio à conferência FEFO</small>
+                            </div>
+                        </div>
+
+                        <div class="help-note">
+
+                            <b>Importante</b>
+
+                            <p>
+                                Se um dado não estiver cadastrado,
+                                o assistente informará que não encontrou
+                                a informação.
+                            </p>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+            <!-- PÁGINA DO ESTOQUE -->
+            <section class="view" id="view-estoque">
+
+                <div class="section-intro">
+
+                    <div>
+                        <span class="tag">BASE CADASTRAL</span>
+
+                        <h2>Estoque de produtos</h2>
+
+                        <p>
+                            Consulte os produtos registrados
+                            no estudo de caso.
+                        </p>
+                    </div>
+
+                    <div class="stock-total">
+                        <b>11</b>
+                        <span>produtos</span>
+                    </div>
+
+                </div>
+
+                <div class="filter-row">
+
+                    <div class="search-box">
+                        ⌕
+
+                        <input
+                            id="stock-search"
+                            type="text"
+                            placeholder="Buscar por produto, código ou endereço..."
+                        >
+                    </div>
+
+                    <select id="zone-filter" aria-label="Filtrar por zona">
+
+                        <option value="todas">Todas as zonas</option>
+                        <option value="seco">Armazém seco</option>
+                        <option value="frio">Câmara refrigerada</option>
+
+                    </select>
+
+                </div>
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>CÓDIGO</th>
+                                <th>PRODUTO</th>
+                                <th>QUANTIDADE</th>
+                                <th>PALLETS</th>
+                                <th>ENDEREÇO</th>
+                                <th>ZONA</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="stock-table"></tbody>
+
+                    </table>
+
+                </div>
+
+                <p class="table-note">
+                    Cadastro e endereços fictícios para demonstração acadêmica.
+                </p>
+
+            </section>
+
+            <!-- PÁGINA DE LOTES -->
+            <section class="view" id="view-lotes">
+
+                <div class="section-intro">
+
+                    <div>
+                        <span class="tag">CONTROLE DE VALIDADE</span>
+
+                        <h2>Lotes e validades</h2>
+
+                        <p>
+                            Acompanhe as datas cadastradas e consulte
+                            os lotes pelo método FEFO.
+                        </p>
+                    </div>
+
+                    <div class="stock-total">
+                        <b>8</b>
+                        <span>lotes de exemplo</span>
+                    </div>
+
+                </div>
+
+                <div class="expiry-note">
+
+                    <span>◷</span>
+
+                    <div>
+                        <b>Atenção às datas de validade</b>
+
+                        <p>
+                            As datas são as informadas no roteiro.
+                            Confira a situação do lote e siga os
+                            procedimentos internos antes de qualquer movimentação.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>LOTE</th>
+                                <th>PRODUTO</th>
+                                <th>VALIDADE</th>
+                                <th>QUANTIDADE</th>
+                                <th>ENDEREÇO</th>
+                                <th>SITUAÇÃO</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="lots-table"></tbody>
+
+                    </table>
+
+                </div>
+
+                <p class="table-note">
+                    O sistema apenas consulta dados; não realiza
+                    baixa, separação ou movimentação de produtos.
+                </p>
+
+            </section>
+
+            <footer>
+                Serra Azul IA
+                <span>•</span>
+                Protótipo acadêmico de consulta interna de estoque
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
