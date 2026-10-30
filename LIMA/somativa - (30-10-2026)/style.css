@@ -1,27 +1,3 @@
-:root {
-    --fundo: #090A16;
-    --fundo-2: #101225;
-    --painel: #171A31;
-
-    --texto: #FFF7E6;
-    --texto-suave: #C7CADB;
-
-    --magenta: #FF3D81;
-    --ciano: #18D9FF;
-    --amarelo: #FFD84D;
-    --roxo: #6D4AFF;
-    --laranja: #FF7A33;
-
-    --borda:
-        rgba(255, 255, 255, 0.12);
-
-    --sombra:
-        0 28px 70px
-        rgba(0, 0, 0, 0.34);
-
-    --raio:
-        20px;
-}
 
 * {
     margin: 0;
@@ -34,38 +10,34 @@ html {
 }
 
 body {
-    background: var(--fundo);
-    color: var(--texto);
+    background-color: #090A16;
+    color: #FFF7E6;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
 img {
-    display: block;
     width: 100%;
+    display: block;
 }
 
 a {
-    color: inherit;
+    color: white;
     text-decoration: none;
 }
 
 header {
-    position: sticky;
-    top: 0;
+    background-color: #080812;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 6%;
-    background: #080812;
-    border-bottom: 1px solid var(--borda);
-}
-header b {
-    font-size: 20px;
+    border-bottom: 1px solid #252638;
 }
 
-header {
-    color: var(--magenta);
+header b {
+    color: #ff0059;
+    font-size: 22px;
 }
 
 nav {
@@ -74,56 +46,173 @@ nav {
 }
 
 nav a {
-    color: var(--texto-suave);
-    font-size: 13px;
-    transition: color 0.3s;
+    color: #C7CADB;
+    font-size: 14px;
 }
+
 nav a:hover {
-    color: var(--magenta);
+    color: #bd0c4a;
 }
 
 main {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 }
 
 section {
-    padding: 55px 6%;
+    padding: 60px 6%;
 }
 
 section b {
-    color: var(--ciano);
-    font-size: 11px;
-    letter-spacing: 3px;
+    color: #42e0ff;
+    font-size: 12px;
 }
 
-h1, h2, h3 {
-    line-height: 1.2;
-    margin: 12px 0;
-}
 h1 {
-    font-size: clamp(35px, 5vw, 60px);
+    font-size: 55px;
+    line-height: 1.2;
+    margin: 15px 0;
 }
 
 h2 {
-    font-size: clamp(25px, 4vw, 36px);
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+h3, h4 {
+    font-size: 30px;
+    margin: 15px 0;
 }
 
 p {
-    color: var(--texto-suave);
+    color: #C7CADB;
     margin: 12px 0;
 }
+
 button {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 25px;
-    background: var(--magenta);
+    background-color: #80163b;
     color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 25px;
+    margin: 15px 0;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 button:hover {
-    background: var(--magenta);
-    transform: translateY(-3px);
+    background-color: #dd306d;
+}
+
+
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 450px;
+    justify-content: center;
+}
+
+#inicio img {
+    width: 150px;
+    margin-top: 20px;
+}
+
+
+
+#classicos {
+    background-color: #101225;
+}
+
+
+
+#herois {
+    background-color: #090A16;
+}
+
+
+#hoje {
+    background-color: #101225;
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.card {
+    background-color: #171A31;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #252638;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #C7CADB;
+}
+
+.card b {
+    color: #42e0ff;
+}
+
+
+
+#classicos .grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+#sobre {
+    background: linear-gradient(90deg, #7540F5, #FF3D81);
+    text-align: center;
+    padding: 35px;
+}
+
+#sobre p {
+    color: white;
+}
+
+#sobre h1 {
+    color: white;
+    font-size: 45px;
+}
+
+
+footer {
+    background-color: #080812;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px;
+    border-top: 1px solid #252638;
+}
+
+footer b {
+    color: white;
+    font-size: 12px;
+}
+
+footer p {
+    color: #C7CADB;
+    font-size: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: #18D9FF;
+    font-size: 10px;
+    margin: 5px;
 }
