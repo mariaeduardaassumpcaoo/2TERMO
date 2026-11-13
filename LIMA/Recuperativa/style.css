@@ -1,0 +1,44 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    background-color: rgb(250, 77, 213);
+    justify-items: center;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    display: block;
+}
+
+.INÍCIO {
+    background-color: rgb(253, 148, 237);
+    justify-items: center;
+}
+
+.cards {
+    background-color: rgb(255, 211, 253);
+    display:grid;
+    grid-template-columns: repeat(3, 3fr);
+    justify-items: center;
+}
+
+figure img {
+    width: 120%;
+    float: left;
+    margin: 0 12px 8px 0;
+}
+
+.informacoes {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr) ;
+    background-color: rgb(255, 211, 253);
+    justify-items: center;
+}
