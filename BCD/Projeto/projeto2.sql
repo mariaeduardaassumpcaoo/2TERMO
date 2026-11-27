@@ -23,16 +23,16 @@ VALUES
 INSERT INTO FORNECEDORES
 (CNPJ, EMAIL, NOME, TELEFONE, CIDADE)
 VALUES
-('12.345.678/0001-90', 'contato@aco.com', 'Aço Brasil', '1933332222', 'Campinas'),
-('98.765.432/0001-10', 'contato@pecas.com', 'Peças Industrial', '1933334444', 'Sumaré'),
-('11.111.111/0001-11', 'contato@metal.com', 'Metalúrgica Central', '1933331111', 'Campinas'),
-('22.222.222/0001-22', 'vendas@ferro.com', 'Ferro Forte', '1933332223', 'Valinhos'),
-('33.333.333/0001-33', 'contato@eletrica.com', 'Elétrica Brasil', '1933333334', 'Paulínia'),
-('44.444.444/0001-44', 'vendas@oleo.com', 'Óleos Industriais', '1933334445', 'Hortolândia'),
-('55.555.555/0001-55', 'contato@protecao.com', 'Proteção Total', '1933335556', 'Americana'),
-('66.666.666/0001-66', 'vendas@abrasivos.com', 'Abrasivos Brasil', '1933336667', 'Sumaré'),
-('77.777.777/0001-77', 'contato@industrial.com', 'Suprimentos Industriais', '1933337778', 'Campinas'),
-('88.888.888/0001-88', 'vendas@ferramentas.com', 'Ferramentas União', '1933338889', 'Valinhos');
+('13.345.678/0001-90', 'contato@aco.com', 'Aço Brasil', '1933332222', 'Campinas'),
+('94.765.432/0001-10', 'contato@pecas.com', 'Peças Industrial', '1933334444', 'Sumaré'),
+('19.111.111/0001-11', 'contato@metal.com', 'Metalúrgica Central', '1933331111', 'Campinas'),
+('26.222.222/0001-22', 'vendas@ferro.com', 'Ferro Forte', '1933332223', 'Valinhos'),
+('35.333.333/0001-33', 'contato@eletrica.com', 'Elétrica Brasil', '1933333334', 'Paulínia'),
+('48.444.444/0001-44', 'vendas@oleo.com', 'Óleos Industriais', '1933334445', 'Hortolândia'),
+('54.555.555/0001-55', 'contato@protecao.com', 'Proteção Total', '1933335556', 'Americana'),
+('67.666.666/0001-66', 'vendas@abrasivos.com', 'Abrasivos Brasil', '1933336667', 'Sumaré'),
+('74.777.777/0001-77', 'contato@industrial.com', 'Suprimentos Industriais', '1933337778', 'Campinas'),
+('84.888.888/0001-88', 'vendas@ferramentas.com', 'Ferramentas União', '1933338889', 'Valinhos');
 
 -- 3. CADASTRAR ESTOQUE
 
@@ -56,16 +56,16 @@ VALUES
 INSERT INTO SETOR
 (CODIGO, NOME, STATUS, LOCALIZACAO, RESPONSAVEL)
 VALUES
-('S01', 'Usinagem', 'disponivel', 'Galpão A', 'Carlos'),
-('S02', 'Montagem', 'disponivel', 'Galpão B', 'João'),
-('S03', 'Manutenção', 'disponivel', 'Galpão C', 'Pedro'),
-('S04', 'Expedição', 'disponivel', 'Galpão D', 'Ana'),
-('S05', 'Produção', 'disponivel', 'Galpão A', 'Lucas'),
-('S06', 'Qualidade', 'disponivel', 'Galpão B', 'Mariana'),
-('S07', 'Segurança', 'disponivel', 'Galpão C', 'Roberto'),
-('S08', 'Logística', 'disponivel', 'Galpão D', 'Fernanda'),
-('S09', 'Almoxarifado', 'disponivel', 'Galpão A', 'Ricardo'),
-('S10', 'Compras', 'disponivel', 'Galpão D', 'Juliana');
+('S011', 'Usinagem', 'disponivel', 'Galpão A', 'Carlos'),
+('S022', 'Montagem', 'disponivel', 'Galpão B', 'João'),
+('S033', 'Manutenção', 'disponivel', 'Galpão C', 'Pedro'),
+('S044', 'Expedição', 'disponivel', 'Galpão D', 'Ana'),
+('S055', 'Produção', 'disponivel', 'Galpão A', 'Lucas'),
+('S066', 'Qualidade', 'disponivel', 'Galpão B', 'Mariana'),
+('S077', 'Segurança', 'disponivel', 'Galpão C', 'Roberto'),
+('S088', 'Logística', 'disponivel', 'Galpão D', 'Fernanda'),
+('S099', 'Almoxarifado', 'disponivel', 'Galpão A', 'Ricardo'),
+('S100', 'Compras', 'disponivel', 'Galpão D', 'Juliana');
 
 -- 5. RELACIONAR MATERIAIS E FORNECEDORES
 
@@ -74,21 +74,36 @@ INSERT INTO FORNECE
 SELECT M.ID_MATERIAIS, F.ID_FORNECEDORES
 FROM MATERIAIS M, FORNECEDORES F
 WHERE M.NOME = 'Chapa de Aço 1020'
-AND F.NOME = 'Aço Brasil';
+AND F.NOME = 'Aço Brasil'
+AND NOT EXISTS (
+    SELECT 1 FROM FORNECE
+    WHERE ID_MATERIAIS = M.ID_MATERIAIS
+    AND ID_FORNECEDORES = F.ID_FORNECEDORES
+);
 
 INSERT INTO FORNECE
 (ID_MATERIAIS, ID_FORNECEDORES)
 SELECT M.ID_MATERIAIS, F.ID_FORNECEDORES
 FROM MATERIAIS M, FORNECEDORES F
 WHERE M.NOME = 'Parafuso M10'
-AND F.NOME = 'Peças Industrial';
+AND F.NOME = 'Peças Industrial'
+AND NOT EXISTS (
+    SELECT 1 FROM FORNECE
+    WHERE ID_MATERIAIS = M.ID_MATERIAIS
+    AND ID_FORNECEDORES = F.ID_FORNECEDORES
+);
 
 INSERT INTO FORNECE
 (ID_MATERIAIS, ID_FORNECEDORES)
 SELECT M.ID_MATERIAIS, F.ID_FORNECEDORES
 FROM MATERIAIS M, FORNECEDORES F
 WHERE M.NOME = 'Tinta Azul'
-AND F.NOME = 'Aço Brasil';
+AND F.NOME = 'Aço Brasil'
+AND NOT EXISTS (
+    SELECT 1 FROM FORNECE
+    WHERE ID_MATERIAIS = M.ID_MATERIAIS
+    AND ID_FORNECEDORES = F.ID_FORNECEDORES
+);
 
 -- 6. RELACIONAR MATERIAIS E ESTOQUE
 
@@ -97,21 +112,36 @@ INSERT INTO PRECISA
 SELECT M.ID_MATERIAIS, E.ID_ESTOQUE
 FROM MATERIAIS M, ESTOQUE E
 WHERE M.NOME = 'Chapa de Aço 1020'
-AND E.PRATELEIRA = 'A01';
+AND E.PRATELEIRA = 'A01'
+AND NOT EXISTS (
+    SELECT 1 FROM PRECISA
+    WHERE ID_MATERIAIS = M.ID_MATERIAIS
+    AND ID_ESTOQUE = E.ID_ESTOQUE
+);
 
 INSERT INTO PRECISA
 (ID_MATERIAIS, ID_ESTOQUE)
 SELECT M.ID_MATERIAIS, E.ID_ESTOQUE
 FROM MATERIAIS M, ESTOQUE E
 WHERE M.NOME = 'Parafuso M10'
-AND E.PRATELEIRA = 'A02';
+AND E.PRATELEIRA = 'A02'
+AND NOT EXISTS (
+    SELECT 1 FROM PRECISA
+    WHERE ID_MATERIAIS = M.ID_MATERIAIS
+    AND ID_ESTOQUE = E.ID_ESTOQUE
+);
 
 INSERT INTO PRECISA
 (ID_MATERIAIS, ID_ESTOQUE)
 SELECT M.ID_MATERIAIS, E.ID_ESTOQUE
 FROM MATERIAIS M, ESTOQUE E
 WHERE M.NOME = 'Tinta Azul'
-AND E.PRATELEIRA = 'B01';
+AND E.PRATELEIRA = 'B01'
+AND NOT EXISTS (
+    SELECT 1 FROM PRECISA
+    WHERE ID_MATERIAIS = M.ID_MATERIAIS
+    AND ID_ESTOQUE = E.ID_ESTOQUE
+);
 
 -- 7. ATUALIZAR MATERIAL
 
@@ -279,12 +309,10 @@ WHERE PRATELEIRA = 'A01';
 
 COMMIT;
 
--- 17. DELETE - EXCLUIR FORNECEDOR
-
-DELETE FROM FORNECEDORES
-WHERE CNPJ = '98.765.432/0001-10';
 
 -- 18. CRIAR ÍNDICE
+
+DROP INDEX idx_mov_data ON MOVIMENTACOES;
 
 CREATE INDEX idx_mov_data
 ON MOVIMENTACOES(DATA_MOVIMENTACAO);
@@ -308,4 +336,5 @@ SELECT * FROM ENVOLVE;
 -- 20. CONSULTAR VIEWS
 
 SELECT * FROM vw_relatorio_movimentacoes;
+
 SELECT * FROM vw_saldo_materiais;
